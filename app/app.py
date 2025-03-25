@@ -1,4 +1,4 @@
-from view.main_view import main
+from main_view import main
 
 if __name__ == "__main__":
     main()

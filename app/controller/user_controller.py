@@ -2,7 +2,6 @@ from repository.user_Repository import UserRepository
 from repository.quota_repository import QuotaRepository
 from model.user import User
 
-
 class UserController:
     def register_user(self, user: User):
         remaining = QuotaRepository.get_remaining_slots()

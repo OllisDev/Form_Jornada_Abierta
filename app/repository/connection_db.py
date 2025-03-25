@@ -6,7 +6,7 @@ class ConnectionDB:
     def __init__(self):
         load_dotenv()
 
-        self.host = os.getenv("DB_HOST", "localhost")
+        self.host = os.getenv("DB_HOST", "127.0.0.1")
         self.user = os.getenv("DB_USER", "root")
         self.password = os.getenv("DB_PASSWORD", "root")
         self.database = os.getenv("DB_NAME", "users_registration")

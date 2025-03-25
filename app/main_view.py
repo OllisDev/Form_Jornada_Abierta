@@ -18,6 +18,8 @@ def main():
     users = user_repo.get_all_users()
     st.table([{"ID": user.get_id(), "Identificador": user.get_identifier(), "Nombre": user.get_name(), "Correo": user.get_email()} for user in users])
 
+    st.write("Formulario de registro...")
+
     st.subheader("Registro manual")
     with st.form("register_form"):
         identifier = st.text_input("Identificador")
@@ -31,3 +33,5 @@ def main():
                 st.error(result["error"])
             else:
                 st.success(result["message"])
+
+
